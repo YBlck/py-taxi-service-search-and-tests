@@ -26,9 +26,11 @@
         </div>
         <div class="col-sm-10 ">
 
-            {% block search %}
-              {% include "includes/search_form.html" %}
-            {% endblock %}
+            {% if search_form %}
+              {% block search %}
+                {% include "includes/search_form.html" %}
+              {% endblock %}
+            {% endif %}
 
             {% block content %}{% endblock %}
 
